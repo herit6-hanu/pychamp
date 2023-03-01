@@ -14,10 +14,36 @@ if a in (1,2,3):
             if(STRING[j] in STRING2):
                 j+=1
             else:
-                print('\033[1;31mYou enterd an invalid format, please try again\033[0m')
+                print('\033[1;31m❌ You enterd an invalid format, please try again ❌\033[0m')
                 break
         if(j==len(STRING)):
             j=int(STRING,2)
+            print('\033[1;32mHere is the converted output of the integer',STRING,'to decimal form',j,'\033[0m')
+    elif(a==2):
+        STRING=str(input('ENTER AN OCTAL FORMAT NUMBER TO CONVERT TO DECIMAL : '))
+        STRING2='01234567'
+        i,j=0,0
+        for i in range(len(STRING)):
+            if(STRING[j] in STRING2):
+                j+=1
+            else:
+                print('\033[1;31m❌ You enterd an invalid format, please try again ❌\033[0m')
+                break
+        if(j==len(STRING)):
+            j=int(STRING,8)
+            print('\033[1;32mHere is the converted output of the integer',STRING,'to decimal form',j,'\033[0m')
+    else:
+        STRING=str(input('ENTER A HEXADECIMAL FORMAT NUMBER TO CONVERT TO DECIMAL : '))
+        STRING2='0123456789abcdef'
+        i,j=0,0
+        for i in range(len(STRING)):
+            if(STRING[j].lower() in STRING2):
+                j+=1
+            else:
+                print('\033[1;31m❌ You enterd an invalid format, please try again ❌\033[0m')
+                break
+        if(j==len(STRING)):
+            j=int(STRING,16)
             print('\033[1;32mHere is the converted output of the integer',STRING,'to decimal form',j,'\033[0m')
 else:
     print('You entered an invalid integer',a,'Please provide valid input')
