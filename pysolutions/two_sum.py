@@ -6,6 +6,8 @@ def two_sum(nums, target):
                 indices.append(i)
                 indices.append(j)
                 return indices
+
+
 num_list = [1, 2, 43, 5, 453, 54, 354, 3, 23, 23, 3, 23, 54, 3]
 k = 6
 print(two_sum(num_list, k))
